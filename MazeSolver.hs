@@ -29,7 +29,7 @@ isWall :: Point -> Maze -> Bool
 isWall (x, y) maze = (maze !! y) !! x == escapeSymbol
 
 isEscape :: Point -> Maze -> Bool
-isEscape = (x, y) maze = (maze !! y) !! x == escapeSymbol
+isEscape (x, y) maze = (maze !! y) !! x == escapeSymbol
 
 findPath :: Maze -> Point -> [Point] -> Maybe [Point]
 findPath maze (x, y) path
