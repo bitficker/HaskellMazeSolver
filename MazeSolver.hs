@@ -1,14 +1,6 @@
 import Data.Graph (path)
 import Data.Maybe (listToMaybe, catMaybes)
 
--- it works like a global variable
-map = 
- ["###   #E##",
-  "##  #   ##",
-  "##S#######"
- ];
-
-
 type Point = (Int, Int)
 type Maze = [String]
 
