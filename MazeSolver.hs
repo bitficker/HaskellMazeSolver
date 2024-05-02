@@ -21,9 +21,11 @@ wallSymbol = '#'
 directions :: [Point]
 directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
-
 isOutOfBounds :: Point -> Maze -> Bool
-isOutOfBounds (x, y) maze = x < 0 || y < 0 || y <= length maze || x >= length (maze !! y)
+--isOutOfBounds (x, y) maze = x < 0 || y < 0 || y <= length maze || x >= length (maze !! y)
+isOutOfBounds point maze = 
+ let (x, y) = point
+ in x < 0 || y < 0 || y >= length maze || x >= length (maze !! y)
 
 isWall :: Point -> Maze -> Bool
 isWall (x, y) maze = (maze !! y) !! x == escapeSymbol
